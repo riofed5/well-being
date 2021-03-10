@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Container, Header, Content, Left, Body, Segment, Button, Right, Text } from 'native-base';
+import {Container} from 'native-base';
 import {StyleSheet} from 'react-native';
 import Helper from '../components/Helper';
 import HelpSeeker from '../components/HelpSeeker';
@@ -45,11 +45,11 @@ const styles = StyleSheet.create({
     tabStyle: {
         borderColor: '#183693',
         marginTop: 15,
-      },
-      activeTabStyle: {
+    },
+    activeTabStyle: {
         backgroundColor: '#183693',
         color: '#ffffff',
-      },
+    },
 })
 
 export default Reach;

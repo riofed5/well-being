@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 const CustomButton = props => {
     return (
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: '#ffffff',
-        fontSize: 18,
+        fontSize: 20,
     },
 });
 

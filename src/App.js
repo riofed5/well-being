@@ -9,8 +9,17 @@
 
 import React from 'react';
 //import all the basic component we have used
-// import Ionicons from 'react-native-vector-icons/Ionicons';
 //import Ionicons to show the icon for bottom options
+// import Ionicons from 'react-native-vector-icons/Ionicons';
+
+import {Platform} from 'react-native';
+let Ionicons;
+if (Platform.OS === "android") {
+  console.log("In app.js, this is Android platform");
+  Ionicons = require('react-native-vector-icons/Ionicons');
+} else {
+  console.log("In app.js, this is IOS platform");
+}
 
 //import React Navigation
 import {createAppContainer} from 'react-navigation';
@@ -24,7 +33,7 @@ import Reach from './views/Reach';
 const HomeStack = createStackNavigator(
   {
     //Defination of Navigaton from home screen
-    Home: { screen: Home },
+    Home: {screen: Home},
   },
   {
     defaultNavigationOptions: {
@@ -41,7 +50,7 @@ const HomeStack = createStackNavigator(
 const ProfileStack = createStackNavigator(
   {
     //Defination of Navigaton from setting screen
-    Profile: { screen: Profile},
+    Profile: {screen: Profile},
   },
   {
     defaultNavigationOptions: {
@@ -59,7 +68,7 @@ const ProfileStack = createStackNavigator(
 const ContactsStack = createStackNavigator(
   {
     //Defination of Navigaton from setting screen
-    Contacts: { screen: Contacts},
+    Contacts: {screen: Contacts},
   },
   {
     defaultNavigationOptions: {
@@ -77,7 +86,7 @@ const ContactsStack = createStackNavigator(
 const ReachStack = createStackNavigator(
   {
     //Defination of Navigaton from setting screen
-    Reach: { screen: Reach },
+    Reach: {screen: Reach},
   },
   {
     defaultNavigationOptions: {
@@ -95,39 +104,42 @@ const ReachStack = createStackNavigator(
 
 const App = createBottomTabNavigator(
   {
-    Home: { screen: HomeStack },
-    Profile: { screen: ProfileStack },
-    Contacts: { screen: ContactsStack },
-    Reach: { screen: ReachStack },
+    Home: {screen: HomeStack},
+    Profile: {screen: ProfileStack},
+    Contacts: {screen: ContactsStack},
+    Reach: {screen: ReachStack},
   },
   {
-    defaultNavigationOptions: ({ navigation }) => ({
-      // tabBarIcon: ({ focused, horizontal, tintColor }) => {
-      //   const { routeName } = navigation.state;
-      //   let IconComponent = Ionicons;
-      //   let iconName;
-      //   if (routeName === 'Home') {
-      //     iconName = `ios-home${focused ?
-      //       '' : '-outline'
-      //     }`;
-      //   } else if (routeName === 'Profile') {
-      //     iconName = `ios-person${focused ?
-      //       '' : '-outline'
-      //     }`;
-      //   } else if (routeName === 'Contacts') {
-      //     iconName = `ios-people${focused ?
-      //       '' : '-outline'
-      //     }`;
-      //   } else if (routeName === 'Reach') {
-      //     iconName = `ios-wifi${focused ?
-      //       '' : '-outline'
-      //     }`;
+    defaultNavigationOptions: ({navigation}) => ({
+
+      // tabBarIcon: ({focused, horizontal, tintColor}) => {
+      //   if (Platform.OS === "android") {
+      //     const {routeName} = navigation.state;
+      //     let IconComponent = Ionicons;
+      //     let iconName;
+      //     if (routeName === 'Home') {
+      //       iconName = `ios-home${focused ?
+      //         '' : '-outline'
+      //         }`;
+      //     } else if (routeName === 'Profile') {
+      //       iconName = `ios-person${focused ?
+      //         '' : '-outline'
+      //         }`;
+      //     } else if (routeName === 'Contacts') {
+      //       iconName = `ios-people${focused ?
+      //         '' : '-outline'
+      //         }`;
+      //     } else if (routeName === 'Reach') {
+      //       iconName = `ios-wifi${focused ?
+      //         '' : '-outline'
+      //         }`;
+      //     }
+      //     return <IconComponent
+      //       name={iconName}
+      //       size={25}
+      //       color={tintColor}
+      //     />;
       //   }
-      //   return <IconComponent
-      //            name={iconName}
-      //            size={25}
-      //            color={tintColor}
-      //          />;
       // },
     }),
     tabBarOptions: {

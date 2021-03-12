@@ -12,15 +12,6 @@ import React from 'react';
 //import Ionicons to show the icon for bottom options
 // import Ionicons from 'react-native-vector-icons/Ionicons';
 
-// import {Platform} from 'react-native';
-// let Ionicons;
-// if (Platform.OS === "android") {
-//   console.log("In app.js, this is Android platform");
-//   Ionicons = require('react-native-vector-icons/Ionicons');
-// } else {
-//   console.log("In app.js, this is IOS platform");
-// }
-
 //import React Navigation
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';

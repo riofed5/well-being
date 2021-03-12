@@ -12,14 +12,14 @@ import React from 'react';
 //import Ionicons to show the icon for bottom options
 // import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {Platform} from 'react-native';
-let Ionicons;
-if (Platform.OS === "android") {
-  console.log("In app.js, this is Android platform");
-  Ionicons = require('react-native-vector-icons/Ionicons');
-} else {
-  console.log("In app.js, this is IOS platform");
-}
+// import {Platform} from 'react-native';
+// let Ionicons;
+// if (Platform.OS === "android") {
+//   console.log("In app.js, this is Android platform");
+//   Ionicons = require('react-native-vector-icons/Ionicons');
+// } else {
+//   console.log("In app.js, this is IOS platform");
+// }
 
 //import React Navigation
 import {createAppContainer} from 'react-navigation';
@@ -110,38 +110,39 @@ const App = createBottomTabNavigator(
     Reach: {screen: ReachStack},
   },
   {
-    defaultNavigationOptions: ({navigation}) => ({
+    // defaultNavigationOptions: ({navigation}) => ({
 
-      // tabBarIcon: ({focused, horizontal, tintColor}) => {
-      //   if (Platform.OS === "android") {
-      //     const {routeName} = navigation.state;
-      //     let IconComponent = Ionicons;
-      //     let iconName;
-      //     if (routeName === 'Home') {
-      //       iconName = `ios-home${focused ?
-      //         '' : '-outline'
-      //         }`;
-      //     } else if (routeName === 'Profile') {
-      //       iconName = `ios-person${focused ?
-      //         '' : '-outline'
-      //         }`;
-      //     } else if (routeName === 'Contacts') {
-      //       iconName = `ios-people${focused ?
-      //         '' : '-outline'
-      //         }`;
-      //     } else if (routeName === 'Reach') {
-      //       iconName = `ios-wifi${focused ?
-      //         '' : '-outline'
-      //         }`;
-      //     }
-      //     return <IconComponent
-      //       name={iconName}
-      //       size={25}
-      //       color={tintColor}
-      //     />;
-      //   }
-      // },
-    }),
+    //   tabBarIcon: ({focused, horizontal, tintColor}) => {
+
+    //     // if (Platform.OS === "android") {
+    //     const {routeName} = navigation.state;
+    //     let IconComponent = Ionicons;
+    //     let iconName;
+    //     if (routeName === 'Home') {
+    //       iconName = `ios-home${focused ?
+    //         '' : '-outline'
+    //         }`;
+    //     } else if (routeName === 'Profile') {
+    //       iconName = `ios-person${focused ?
+    //         '' : '-outline'
+    //         }`;
+    //     } else if (routeName === 'Contacts') {
+    //       iconName = `ios-people${focused ?
+    //         '' : '-outline'
+    //         }`;
+    //     } else if (routeName === 'Reach') {
+    //       iconName = `ios-wifi${focused ?
+    //         '' : '-outline'
+    //         }`;
+    //     }
+    //     // }
+    //     return <IconComponent
+    //       name={iconName}
+    //       size={25}
+    //       color={tintColor}
+    //     />;
+    //   },
+    // }),
     tabBarOptions: {
       activeTintColor: '#ffffff',
       inactiveTintColor: '#183693',
